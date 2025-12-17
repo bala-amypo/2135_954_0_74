@@ -11,5 +11,22 @@ public class Studctl{
     private Studeservice ser;
     //POST
     @PostMapping("/add")
-    
+    public studententity addStudent(@RequestBody Studententity st){
+        return ser.saveData(st);
+    }
+    //GET ALL
+    @GETMapping("/getall")
+    public Collection<Studententity>getAllStudents(){
+        return ser.getAll();
+    }
+    //GET BY ID 
+    @GetMapping("/get/{id}")
+    public Studententity getStudentById(@PathVariable int id) {
+        return ser.getById(id);
+    }
+    //PUT(UPDATE)
+    @
+    }   
+    }
+    }
 }
